@@ -1,0 +1,32 @@
+{
+  "areas": {
+    "coordenacao": {"nome": "Coordenação", "cor": "#8D7FE0", "bg": "#E8E4FB"},
+    "professores": {"nome": "Professores", "cor": "#1D9E75", "bg": "#DFF3E9"},
+    "compras":     {"nome": "Compras",     "cor": "#D8632F", "bg": "#FBE3D8"},
+    "psm":         {"nome": "PSM",         "cor": "#2E7FD6", "bg": "#DCEBFB"},
+    "qg":          {"nome": "QG",          "cor": "#B4790F", "bg": "#FBEFD4"},
+    "producao":    {"nome": "Produção",    "cor": "#5C8A25", "bg": "#E8F1D9"},
+    "midia":       {"nome": "Mídia",       "cor": "#C94A78", "bg": "#FBE0EA"}
+  },
+  "marcos": [
+    {"id": "m1", "nome": "Inscrição e véspera", "etapas": ["inscricao"]},
+    {"id": "m2", "nome": "Dia da prova", "etapas": ["time1", "time2", "compras_captura"]},
+    {"id": "m3", "nome": "Processamento PSM", "etapas": ["prova_escaneada", "gabarito_app", "plataforma_psm", "resolucao_link"]},
+    {"id": "m4", "nome": "QG e publicação", "etapas": ["qg_recebe", "qg_valida", "producao", "midia", "publica_site"]}
+  ],
+  "etapas": {
+    "inscricao":       {"nome": "Professores inscritos",        "area": "coordenacao", "responsavel": "Coordenação",            "status": "ok",          "prazo": "A definir", "descricao": "Cadastro dos professores que vão aplicar e recolher a prova no dia do Enem.", "gargalo": ""},
+    "time1":           {"nome": "Time 1 sai com o gabarito",    "area": "professores", "responsavel": "Time 1",                  "status": "naoiniciado", "prazo": "2h após o início", "descricao": "Saem com o gabarito, 2 horas após o início da prova.", "gargalo": ""},
+    "time2":           {"nome": "Time 2 sai com a prova",       "area": "professores", "responsavel": "Time 2",                  "status": "naoiniciado", "prazo": "30 min antes do fim", "descricao": "Saem com o caderno de prova, 30 minutos antes do término.", "gargalo": ""},
+    "compras_captura": {"nome": "Compras: captura",             "area": "compras",     "responsavel": "Equipe de compras",       "status": "naoiniciado", "prazo": "A definir", "descricao": "Escaneia e envia as provas completas para o PSM.", "gargalo": ""},
+    "prova_escaneada": {"nome": "Prova escaneada recebida",     "area": "psm",         "responsavel": "Time PSM",                "status": "naoiniciado", "prazo": "A definir", "descricao": "Provas completas escaneadas e enviadas pela equipe de compras.", "gargalo": ""},
+    "gabarito_app":    {"nome": "Gabarito letra (app)",         "area": "professores", "responsavel": "Time 1",                  "status": "naoiniciado", "prazo": "A definir", "descricao": "Gabarito em letras enviado pelo Time 1 via app de Produtos Digitais.", "gargalo": ""},
+    "plataforma_psm":  {"nome": "Plataforma Produtos Digitais", "area": "psm",         "responsavel": "Time PSM",                "status": "naoiniciado", "prazo": "A definir", "descricao": "Time PSM usa a plataforma para gerar a resolução a partir da prova escaneada.", "gargalo": ""},
+    "resolucao_link":  {"nome": "Resolução via link",           "area": "psm",         "responsavel": "Time PSM",                "status": "naoiniciado", "prazo": "A definir", "descricao": "Resolução gerada é disponibilizada por link para o QG validar.", "gargalo": ""},
+    "qg_recebe":       {"nome": "QG recebe resolução",          "area": "qg",          "responsavel": "QG",                      "status": "naoiniciado", "prazo": "A definir", "descricao": "QG recebe o link da resolução e o gabarito letra para conferência.", "gargalo": ""},
+    "qg_valida":       {"nome": "Valida ou corrige",            "area": "qg",          "responsavel": "QG",                      "status": "naoiniciado", "prazo": "A definir", "descricao": "QG confere a resolução, valida ou faz correções antes de liberar.", "gargalo": ""},
+    "producao":        {"nome": "Produção resoluções",          "area": "producao",    "responsavel": "Produção (sala ao lado)", "status": "naoiniciado", "prazo": "A definir", "descricao": "Material validado é deslocado para o setor de produção das resoluções.", "gargalo": ""},
+    "midia":           {"nome": "Gabarito à mídia",             "area": "midia",       "responsavel": "A definir",               "status": "naoiniciado", "prazo": "A definir", "descricao": "Gabarito letra completo e validado é disponibilizado para a mídia.", "gargalo": ""},
+    "publica_site":    {"nome": "Publica no site",              "area": "producao",    "responsavel": "A definir",               "status": "naoiniciado", "prazo": "A definir", "descricao": "Resolução publicada automaticamente no site Lidera Enem Bernoulli.", "gargalo": ""}
+  }
+}
