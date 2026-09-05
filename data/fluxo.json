@@ -1,0 +1,38 @@
+{
+  "categorias": {
+    "rebecca":  {"nome": "Rebecca Teixeira (Governança)", "cor": "#8D7FE0"},
+    "diego":    {"nome": "Diego Nascimento (Plataforma)",  "cor": "#2E7FD6"},
+    "luiza":    {"nome": "Luiza Zaramela (Correção)",      "cor": "#1D9E75"},
+    "erica":    {"nome": "Érica Luz (Captação/Live)",      "cor": "#D8632F"},
+    "roberto":  {"nome": "Roberto Lemos (Testes/Conteúdo)","cor": "#B4790F"},
+    "anakely":  {"nome": "Ana Kely Araújo (Divulgação)",   "cor": "#C94A78"},
+    "marco":    {"nome": "Marco crítico",                  "cor": "#F2C94C"}
+  },
+  "nos": {
+    "n71": {"titulo": "7.1 Escopo e governança", "categoria": "rebecca", "responsavel": "Rebecca Teixeira", "periodo": "24/08/26", "pessoas": "", "status": "Concluído (3/3)", "descricao": "Visão executiva sobre pesos das frentes de correção, critérios de aceite, cronograma macro e os ritos de gestão (fórum de líderes quinzenal)."},
+    "n72": {"titulo": "7.2 Plataforma de correção e publicação", "categoria": "diego", "responsavel": "Diego Nascimento", "periodo": "24/08 a 20/10/26", "pessoas": "", "status": "Em andamento (1/8)", "descricao": "Captura, correção, validação e publicação em uma ferramenta única. Inclui a IA de correlação/correção e o teste de carga antes da 1ª simulação."},
+    "n73": {"titulo": "7.3 Correção — pessoas e método", "categoria": "luiza", "responsavel": "Luiza Zaramela", "periodo": "01/06 a 09/10/26", "pessoas": "2 grupos de professores (Time 1 sai antes, Time 2 fica até o fim)", "status": "Em andamento (2/7)", "descricao": "Inscrição dos professores, fluxo pedagógico de respostas/revisão/comentários, e o fluxo de envio das respostas ao QG."},
+    "n74": {"titulo": "7.4 Captação de provas", "categoria": "erica", "responsavel": "Érica Luz", "periodo": "01/09 a 15/11/26", "pessoas": "7 compradores de prova por dia, nas duas datas", "status": "Não iniciado (0/6)", "descricao": "Contratação da agência, escala de compradores, táxi/motoboy, e estrutura de scan in loco nos dois dias de prova."},
+    "n75": {"titulo": "7.5 Pré-teste técnico e simulação geral", "categoria": "roberto", "responsavel": "Roberto Lemos", "periodo": "01/09 a 28/10/26", "pessoas": "", "status": "Não iniciado (0/8)", "descricao": "Pré-teste técnico remoto (14/10), 1ª simulação geral presencial (21/10, fluxo completo exceto professores) e 2ª simulação remota (28/10, só se a 1ª revelar falhas)."},
+    "marco_provas": {"titulo": "Provas do Enem", "categoria": "marco", "responsavel": "", "periodo": "08/11 e 15/11/26", "pessoas": "", "status": "Marco crítico", "descricao": "As duas datas de prova. Todas as demais frentes existem para chegar nelas."},
+    "n76": {"titulo": "7.6 Operação do dia — Gabarito", "categoria": "luiza", "responsavel": "Luiza Zaramela / Diego Nascimento", "periodo": "08/11 e 15/11/26", "pessoas": "", "status": "Não iniciado (0/5)", "descricao": "Operação de cada prova e publicação do gabarito na Central Enem no mesmo dia, com ajustes entre as duas datas."},
+    "n77": {"titulo": "7.7 Operação do dia — Live Marketing", "categoria": "erica", "responsavel": "Érica Luz", "periodo": "01/09 a 30/10/26", "pessoas": "", "status": "Não iniciado (0/5)", "descricao": "Infraestrutura e ambientação em Lourdes, equipamentos, rádios e alimentação/happy hour para os dias de prova."},
+    "n78": {"titulo": "7.8 Divulgação e reverberação", "categoria": "anakely", "responsavel": "Ana Kely Araújo", "periodo": "28/09 a 16/11/26", "pessoas": "", "status": "Não iniciado (0/5)", "descricao": "Registro do horário de publicação, logística de envio aos veículos contratados, envio à imprensa e monitoramento dos concorrentes."},
+    "n79": {"titulo": "7.9 Conteúdo e correlação pós-prova", "categoria": "anakely", "responsavel": "Ana Kely Araújo", "periodo": "01/10 a 30/11/26", "pessoas": "", "status": "Não iniciado (0/3)", "descricao": "Ambiente de correlação entre material Bernoulli e a prova, fontes do Pedagógico e conteúdos próprios de pós-prova."}
+  },
+  "arestas": [
+    {"id": "e1", "de": "n71", "para": "n72", "rotulo": ""},
+    {"id": "e2", "de": "n71", "para": "n73", "rotulo": ""},
+    {"id": "e3", "de": "n71", "para": "n74", "rotulo": ""},
+    {"id": "e4", "de": "n71", "para": "n77", "rotulo": ""},
+    {"id": "e5", "de": "n72", "para": "n75", "rotulo": ""},
+    {"id": "e6", "de": "n73", "para": "n75", "rotulo": ""},
+    {"id": "e7", "de": "n75", "para": "marco_provas", "rotulo": ""},
+    {"id": "e8", "de": "n74", "para": "marco_provas", "rotulo": ""},
+    {"id": "e9", "de": "n73", "para": "marco_provas", "rotulo": "gabarito letra"},
+    {"id": "e10", "de": "marco_provas", "para": "n76", "rotulo": ""},
+    {"id": "e11", "de": "marco_provas", "para": "n77", "rotulo": ""},
+    {"id": "e12", "de": "n76", "para": "n78", "rotulo": ""},
+    {"id": "e13", "de": "n76", "para": "n79", "rotulo": ""}
+  ]
+}
